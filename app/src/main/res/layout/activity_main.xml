@@ -14,6 +14,7 @@
         android:text="BUAT BARU"
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
+        android:onClick="editMode"
         android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
