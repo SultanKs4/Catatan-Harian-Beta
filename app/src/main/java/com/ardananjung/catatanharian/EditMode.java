@@ -5,6 +5,7 @@ import androidx.room.RoomDatabase;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class EditMode extends AppCompatActivity {
         a.namaKegiatan=this.nama.getText().toString();
         a.keterangan=this.keterangan.getText().toString();
         a.waktu=this.waktu.getText().toString();
+        return a;
     }
 
     public void onBtnSave(View view){
@@ -46,6 +48,16 @@ public class EditMode extends AppCompatActivity {
                 ((catatanHarianDb) database).aktifitasDao().insertAll(aktifitas);
 
                 return null;
+            }
+
+            @Override
+            public void onDatabaseOperationFinished(Object... results) {
+                new Handler().postDelayed(new Runnable(){
+                    @Override
+                    public void run(){
+                        Toast.makeText(getApplicationContext(), "Berhasil Ditambahkan", Toast.LENGTH_SHORT).show();
+                    }
+                }, 1000);
             }
         }).execute(this.makeAktifitas());
     }
