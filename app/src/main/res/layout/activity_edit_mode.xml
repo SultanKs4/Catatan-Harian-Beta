@@ -67,6 +67,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:text="Ubah"
+        android:onClick="updateData"
         app:layout_constraintTop_toBottomOf="@id/edtWaktu"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -77,6 +78,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:text="Selesai"
+        android:onClick="onBtnDelete"
         app:layout_constraintTop_toBottomOf="@id/btnUbah"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
