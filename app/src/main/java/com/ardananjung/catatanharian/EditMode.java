@@ -20,6 +20,8 @@ import com.ardananjung.catatanharian.data.catatanHarianDb;
 public class EditMode extends AppCompatActivity {
     EditText nama,keterangan,waktu;
     private Aktifitas currentAktifitas;
+    public static final String KEY_DATA = "key_data";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,12 @@ public class EditMode extends AppCompatActivity {
         nama=findViewById(R.id.edtNama);
         keterangan=findViewById(R.id.edtKeterangan);
         waktu=findViewById(R.id.edtWaktu);
+
+        Aktifitas parcelableExtra = getIntent().getParcelableExtra(KEY_DATA);
+
+        nama.setText(parcelableExtra.getNamaKegiatan().trim());
+        keterangan.setText(parcelableExtra.getKeterangan());
+        waktu.setText(parcelableExtra.getWaktu());
     }
 
     private Aktifitas makeAktifitas(){

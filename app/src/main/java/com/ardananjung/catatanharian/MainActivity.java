@@ -52,11 +52,10 @@ public class MainActivity extends AppCompatActivity implements AktifitasItemView
     }
     @Override
     public void onClick(View view, int position) {
-        Aktifitas aktifitas= aktifitasList.get(position);
+        Aktifitas aktifitas = aktifitasList.get(position);
         // Kirim id pada item yang di klik untuk kebutuhan query
-        int idAktifitas = aktifitas.getId();
         Intent i = new Intent(MainActivity.this, EditMode.class);
-        i.putExtra(KEY_DATA, idAktifitas);
+        i.putExtra(KEY_DATA, aktifitas);
         startActivity(i);
     }
 }
