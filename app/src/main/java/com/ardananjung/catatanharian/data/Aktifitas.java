@@ -20,5 +20,35 @@ public class Aktifitas {
     @ColumnInfo(name = "waktu")
     public String waktu;
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNamaKegiatan() {
+        return namaKegiatan;
+    }
+
+    public void setNamaKegiatan(String namaKegiatan) {
+        this.namaKegiatan = namaKegiatan;
+    }
+
+    public String getKeterangan() {
+        return keterangan;
+    }
+
+    public void setKeterangan(String keterangan) {
+        this.keterangan = keterangan;
+    }
+
+    public String getWaktu() {
+        return waktu;
+    }
+
+    public void setWaktu(String waktu) {
+        this.waktu = waktu;
+    }
 }

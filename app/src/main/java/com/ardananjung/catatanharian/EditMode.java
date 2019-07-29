@@ -78,7 +78,7 @@ public class EditMode extends AppCompatActivity {
         aktifitasDao.delete(this.currentAktifitas);
         Toast.makeText(this, "Your data has been deleted..", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // Lompati halaman sebelumnya //todo cek ini kalo force pindah
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // Lompati halaman sebelumnya //todo cek ini kalo force pindah
         startActivity(intent);
     }
 
